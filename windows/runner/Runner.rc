@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.storynap" "\0"
-            VALUE "FileDescription", "yelloweye" "\0"
+            VALUE "FileDescription", "warded" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "yelloweye" "\0"
+            VALUE "InternalName", "warded" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.storynap. All rights reserved." "\0"
-            VALUE "OriginalFilename", "yelloweye.exe" "\0"
-            VALUE "ProductName", "yelloweye" "\0"
+            VALUE "OriginalFilename", "warded.exe" "\0"
+            VALUE "ProductName", "warded" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

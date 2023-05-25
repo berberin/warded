@@ -1,4 +1,4 @@
-package com.storynap.yelloweye
+package com.storynap.warded
 
 import io.flutter.embedding.android.FlutterActivity
 
