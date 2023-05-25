@@ -1,6 +1,7 @@
-
 import 'package:fpdart/fpdart.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../../../common/domain/failures/failure.dart';
 
 /// Manage token in device storage
 class AuthTokenLocalDataSource {

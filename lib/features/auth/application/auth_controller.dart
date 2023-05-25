@@ -1,7 +1,7 @@
-
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:uni_links/uni_links.dart';
 
+import '../auth_provider.dart';
 import '../domain/entities/user_entity.dart';
 
 part 'auth_controller.g.dart';

@@ -1,4 +1,4 @@
-name: yelloweye
+name: warded
 description: Every day tracker project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: '>=2.19.6 <3.1.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -32,42 +32,48 @@ dependencies:
     sdk: flutter
 
   # ui
-  cupertino_icons:
-  google_fonts:
-  flutter_carousel_slider:
-  stacked_card_carousel:
+  cupertino_icons: ^1.0.5
+  google_fonts: ^4.0.4
+  flutter_carousel_slider: ^1.1.0
+  stacked_card_carousel: ^0.0.4
+  pixelarticons: ^0.4.0
 
   # data
-  flutter_riverpod:
-  csv:
-  hive_flutter:
-  shared_preferences:
+  # get_it: ^7.6.0
+  flutter_riverpod: ^2.3.6
+  csv: ^5.0.2
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.1.1
+  dio: ^5.1.2
+
 
   # util
-  fpdart:
-  intl:
-  go_router:
-  riverpod_annotation:
+  intl: ^0.18.1
+  go_router: ^7.0.2
+  riverpod_annotation: ^2.1.1
+  json_annotation: ^4.8.1
+  freezed_annotation: ^2.2.0
+
+
 
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons:
-  flutter_app_name:
-  freezed:
-  json_serializable:
-  very_good_analysis:
-  build_runner:
-  riverpod_generator:
+  flutter_lints: ^2.0.1
+  flutter_launcher_icons: ^0.13.1
+  flutter_app_name: ^0.1.1
+  freezed: ^2.3.4
+  json_serializable: ^6.7.0
+  hive_generator: ^2.0.0
+  very_good_analysis: ^5.0.0+1
+  build_runner: ^2.4.4
+  riverpod_generator: ^2.2.3
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+
+dependency_overrides:
+  xml: ^6.3.0
 
 flutter_icons:
   android: "launcher_icon"
@@ -89,7 +95,7 @@ flutter_icons:
 
 flutter_app_name:
   name: "Watcher"
-  id: "com.storynap.yelloweye"
+  id: "com.storynap.warded"
 
 flutter_native_splash:
   # This package generates native code to customize Flutter's default white native splash screen
@@ -139,9 +145,9 @@ flutter_native_splash:
   # The image parameter sets the splash screen icon image.  If this parameter is not specified,
   # the app's launcher icon will be used instead.
   # Please note that the splash screen will be clipped to a circle on the center of the screen.
-  # App icon with an icon background: This should be 960×960 pixels, and fit within a circle
+  # App icon with an icon background: This should be 960?960 pixels, and fit within a circle
   # 640 pixels in diameter.
-  # App icon without an icon background: This should be 1152×1152 pixels, and fit within a circle
+  # App icon without an icon background: This should be 1152?1152 pixels, and fit within a circle
   # 768 pixels in diameter.
   #image: assets/android12splash.png
 
@@ -239,9 +245,11 @@ flutter:
   uses-material-design: true
 
   assets:
-   - assets/google_fonts/
-   - assets/images/
-   - assets/data/
+    - assets/google_fonts/
+    - assets/images/
+    - assets/data/
+    - assets/images/camp/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
