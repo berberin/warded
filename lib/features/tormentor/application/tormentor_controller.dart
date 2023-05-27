@@ -46,13 +46,13 @@ class TormentorController extends _$TormentorController {
       bool endList = true;
       for (var r in records.reversed) {
         if ((r.marked ?? false)) {
-          count = r.time?.difference(DateTime.now()).inDays ?? 0;
+          count = DateTime.now().difference(r.time!).inDays;
           endList = false;
           break;
         }
       }
       if (endList) {
-        count = records[0].time?.difference(DateTime.now()).inDays ?? 0;
+        count = DateTime.now().difference(records[0].time!).inDays;
       }
 
       return TormentorState(
