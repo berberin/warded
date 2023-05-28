@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:warded/features/tormentor/application/state/tormentor_state.dart';
 import 'package:warded/features/tormentor/domain/entities/record.dart';
@@ -41,18 +42,25 @@ class TormentorController extends _$TormentorController {
     if (records.isNotEmpty) {
       double rate = 1 -
           records.where((element) => element.marked ?? true).length /
-              (DateTime.now().difference(records.first.time!).inDays + 1);
+              (DateUtils.dateOnly(DateTime.now())
+                      .difference(DateUtils.dateOnly(records.first.time!))
+                      .inDays +
+                  1);
       int count = 0;
       bool endList = true;
       for (var r in records.reversed) {
         if ((r.marked ?? false)) {
-          count = DateTime.now().difference(r.time!).inDays;
+          count = DateUtils.dateOnly(DateTime.now())
+              .difference(DateUtils.dateOnly(r.time!))
+              .inDays;
           endList = false;
           break;
         }
       }
       if (endList) {
-        count = DateTime.now().difference(records[0].time!).inDays;
+        count = DateUtils.dateOnly(DateTime.now())
+            .difference(DateUtils.dateOnly(records[0].time!))
+            .inDays;
       }
 
       return TormentorState(
